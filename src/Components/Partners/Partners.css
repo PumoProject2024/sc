@@ -1,0 +1,83 @@
+.partners-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .partners-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .partner-group {
+    width: 45%;
+  }
+}
+
+.partner-group {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid black;
+}
+
+.partner-group h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.6em;
+}
+
+.partner-group.vendors .partner-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.partner-group.banks .partner-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+
+.partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.partner-item img {
+  width: 140px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.partner-item img:hover {
+  transform: scale(1.1);
+}
+
+.partner-item p {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.partner-item strong {
+  font-size: 1.4em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

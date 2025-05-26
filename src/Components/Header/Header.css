@@ -1,0 +1,76 @@
+.header-container {
+    background: #0a2048;
+    color: #fff;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.hero-logo {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+
+}
+
+.company-name {
+    font-size: 2em;
+    margin: 0;
+    color: white;
+}
+
+.heading-underline {
+    height: 4px;
+    width: 180px;
+    margin: 5px 0;
+    background: linear-gradient(to right, #f39c12, #d35400);
+    border-radius: 2px;
+}
+
+.header-text h3 {
+    margin: 3px 0;
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+
+}
+
+.header-right ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header-right li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.header-right li a:hover {
+    color: #ff7f50;
+}
