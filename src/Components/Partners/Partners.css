@@ -12,6 +12,14 @@
   justify-content: center;
 }
 
+.partners-section h1 {
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: #091036;
+  color: #fff;
+}
+
+
 @media (min-width: 768px) {
   .partners-container {
     flex-direction: row;
@@ -64,7 +72,7 @@
   border-radius: 50%;
   background-color: white;
   padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .partner-item img:hover {

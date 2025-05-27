@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
@@ -20,14 +21,25 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Your message is successfully sent. Kindly wait until we get back to you");
-    // Reset form
-    setFormData({
-      name: '',
-      contact: '',
-      email: '',
-      location: '',
-      message: ''
+
+    emailjs.send(
+      'service_mc8o6ig',       // e.g., 'service_abc123'
+      'template_zqto05t',      // e.g., 'template_xyz456'
+      formData,
+      'SVIfNeyxJHRHMt_4_'        // e.g., 'ABCdefGHIjkl123456'
+    )
+    .then((result) => {
+      alert("Your message is successfully sent. Kindly wait until we get back to you.");
+      setFormData({
+        name: '',
+        contact: '',
+        email: '',
+        location: '',
+        message: ''
+      });
+    }, (error) => {
+      alert("Something went wrong. Please try again later.");
+      console.error(error);
     });
   };
 
@@ -35,7 +47,6 @@ const Contact = () => {
     <section id="contact">
       <h1>Contact Us</h1>
       <div className="contact-container">
-        
         <div className="contact-enqiury">
           <form onSubmit={handleSubmit}>
             <br />
@@ -89,12 +100,15 @@ const Contact = () => {
             82, Jagannathan Salai, Anjugam Nagar<br />
             SRP Colony, Kolathur, Chennai,<br />
             Tamil Nadu 600082.</p>
+            <br/>
 
           <p><strong>Contact Person:</strong><br />
             Vasudevan K/ Parthasarrathi V</p>
+                      <br/>
 
           <p><strong><i className="fas fa-phone" style={{fontSize: '0.7em'}}></i> Phone Number:</strong><br />
             +91 98407 98059/ 98405 24873</p>
+            <br/>
 
           <p><strong><i className="fas fa-envelope" style={{fontSize: '0.7em'}}></i> Email Id:</strong><br />
             sarrathicontruction@gmail.com</p>

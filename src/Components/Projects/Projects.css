@@ -3,6 +3,14 @@
   padding: 2em;
 }
 
+.projects-section h1 {
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: #091036;
+  color: #fff;
+
+}
+
 .project-gallery {
   display: flex;
   overflow-x: auto;
@@ -39,7 +47,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -60,7 +68,8 @@
   cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -80,6 +89,8 @@
   right: 30px;
 }
 
-.prev:hover, .next:hover, .close:hover {
+.prev:hover,
+.next:hover,
+.close:hover {
   color: #f1f1f1;
 }

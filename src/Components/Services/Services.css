@@ -3,6 +3,12 @@
   padding: 2em;
   text-align: center;
 }
+.services-section h1{
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #091036;
+    color: #fff;
+}
 
 .services-container {
   display: grid;

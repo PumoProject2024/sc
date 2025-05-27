@@ -4,6 +4,9 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <h3>About Us</h3>
+      <div className="price-arrow">
+        <span>Construction Starts<br/> @<br/><span className="price-highlight">Rs. 2200/sqft</span></span>
+      </div>
       <div className="about-container">
         <p>
           We founded our company out of pure love and passion for the engineering and construction industry. From the very beginning, our mission has been to create spaces that inspire, uplift, and bring lasting value to the people who live in them. Over the past 30+ years, we have built a reputation rooted in quality, trust, and dedication.
@@ -14,4 +17,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;

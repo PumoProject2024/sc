@@ -1,25 +1,50 @@
 .contact-container {
   display: flex;
-  flex-direction: column; /* For mobile */
+  flex-direction: column;
+  /* For mobile */
   gap: 2em;
   width: 100%;
   font-size: larger;
   margin-top: 0;
   padding-top: 0;
-  background-color: #0a2048; /* Bootstrap blue */
+  background-color: #0a2048;
+  /* Bootstrap blue */
   color: white;
 }
 
+#contact h1 {
+  margin-bottom: 30px;
+  /* or any value you prefer */
+}
+
 .contact-enqiury,
-.contact-info,
 .map-container {
   flex: 1;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1); /* Light translucent overlay */
+  background: rgba(255, 255, 255, 0.1);
+  /* Light translucent overlay */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   color: white;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  /* Light translucent overlay */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Merriweather', serif;
+}
+.contact-info p strong{
+ font-size: 22px;
+}
+.contact-info p{
+  font-size: 18px;
 }
 
 /* Hover effect */
@@ -39,7 +64,8 @@ form {
   margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
   margin: 10px 0;
   padding: 12px;
   font-size: 1.1em;
@@ -71,15 +97,25 @@ button:hover {
     align-items: stretch;
   }
 
-  .contact-info { order: 1; }
-  .contact-enqiury { order: 2; }
-  .map-container { order: 3; }
+  .contact-info {
+    order: 1;
+  }
+
+  .contact-enqiury {
+    order: 2;
+  }
+
+  .map-container {
+    order: 3;
+  }
 }
 
 #contact h1 {
-  text-align: center; /* Centers all inline content like <h1> inside */
+  text-align: center;
+  /* Centers all inline content like <h1> inside */
 }
 
 .contact-info strong {
-  font-size: 1.3em; /* Adjust as needed */
+  font-size: 1.3em;
+  /* Adjust as needed */
 }

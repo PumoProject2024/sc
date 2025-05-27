@@ -1,5 +1,5 @@
 .header-container {
-    background: #0a2048;
+    background: #091036;
     color: #fff;
     padding: 0.5em 1em;
     display: flex;
@@ -16,8 +16,8 @@
 
 .hero-logo {
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 100px;
     object-fit: cover;
 }
 
