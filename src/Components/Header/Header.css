@@ -74,3 +74,78 @@
 .header-right li a:hover {
     color: #ff7f50;
 }
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  .hero-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-name {
+    font-size: 1.5em;
+  }
+
+  .heading-underline {
+    width: 140px;
+    height: 3px;
+    margin: 4px 0;
+  }
+
+  .header-text h3 {
+    font-size: 1rem;
+    margin: 2px 0;
+  }
+
+  .header-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+    margin-top: 10px;
+  }
+
+  .header-right li a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .company-name {
+    font-size: 1.3em;
+  }
+
+  .heading-underline {
+    width: 120px;
+    height: 2.5px;
+  }
+
+  .header-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .header-right li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}

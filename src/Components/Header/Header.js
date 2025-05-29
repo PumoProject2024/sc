@@ -7,7 +7,7 @@ const Header = () => {
             <div className="header-left">
                 <img src="/logo3.jpeg" alt="Sarrathi Logo" className="hero-logo" />
                 <div className="header-text">
-                    <h1 className="company-name">Sarrathi Construction</h1>
+                    <h1 className="company-name">Sarrathi Constructions</h1>
                     <div className="heading-underline"></div>
                     <h3>Art of Construction</h3>
                     <h3>30+ Years of Experiences</h3>

@@ -4,7 +4,7 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      icon: "/images/icons/soil testing.png",
+      icon: "/images/icons/Soil-Testing.png",
       title: "Soil Testing",
       description: "Comprehensive soil analysis to ensure foundation safety and construction viability."
     },

@@ -71,18 +71,14 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 2em 1em;
-  }
-
-  .about-section h3 {
-    font-size: 1.6em;
+    padding: 2em 3.5em 2em 1em; /* add right padding to make space */
   }
 
   .price-arrow {
-    top: 80px;
-    right: -10px;
-    padding: 12px 20px 12px 30px;
-    min-width: 160px;
+    top: 70px;
+    right: 10px; /* move a little inside */
+    padding: 12px 18px 12px 28px;
+    min-width: 150px;
     font-size: 0.9rem;
   }
 
@@ -93,11 +89,54 @@
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 2em 3.5em 2em 1em; /* keep right padding consistent */
+  }
+
   .price-arrow {
-    top: 70px;
-    right: -15px;
-    padding: 10px 15px 10px 25px;
-    min-width: 140px;
-    font-size: 0.8rem;
+    top: auto;
+    right: auto;
+    position: relative; /* switch to relative so it flows */
+    margin: 0 auto 15px auto; /* center horizontally, margin below */
+    clip-path: none; /* remove arrow shape if desired */
+    min-width: auto;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: fit-content;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 20px 50%);
+
+  }
+
+  .about-section h3 {
+    font-size: 1.3em;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
   }
 }
+
+@media (max-width: 360px) {
+  .about-section {
+    padding: 1.5em 2.5em 1.5em 0.8em; /* reduced right padding for very small */
+  }
+
+  .price-arrow {
+    top: auto;
+    right: auto;
+    position: relative;
+    margin: 0 auto 12px auto;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    clip-path: none;
+  }
+
+  .about-section h3 {
+    font-size: 1.2em;
+  }
+
+  .about-container p {
+    font-size: 0.9rem;
+  }
+}
+

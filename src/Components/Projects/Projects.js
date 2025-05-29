@@ -49,6 +49,8 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, [projectImages.length]);
 
+
+
     const openLightbox = (index) => {
         setCurrentImageIndex(index);
         setLightboxOpen(true);
@@ -90,17 +92,21 @@ const Projects = () => {
             {lightboxOpen && (
                 <div className="lightbox" onClick={closeLightbox}>
                     <span className="close" onClick={closeLightbox}>&times;</span>
-                    <img
-                        className="lightbox-image"
-                        src={projectImages[currentImageIndex]}
-                        alt="Project"
-                        onClick={(e) => e.stopPropagation()}
-                    />
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <div className="lightbox-image-wrapper">
+                            <img
+                                className="lightbox-image"
+                                src={projectImages[currentImageIndex]}
+                                alt="Project"
+                            />
+                            <div className="lightbox-title-overlay">Sarrathi Constructions</div>
+                        </div>
+                    </div>
                     <button className="prev" onClick={(e) => { e.stopPropagation(); changeImage(-1); }}>&#10094;</button>
                     <button className="next" onClick={(e) => { e.stopPropagation(); changeImage(1); }}>&#10095;</button>
-
                 </div>
             )}
+
         </section>
     );
 };
