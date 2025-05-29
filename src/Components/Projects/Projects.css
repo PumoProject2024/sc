@@ -112,6 +112,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
 }
+.lightbox-image {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none; /* Optional: blocks all interaction */
+}
+
 
 /* Prevent right-click and download */
 .overlay-blocker {
