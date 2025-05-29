@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="header-text">
                     <h1 className="company-name">Sarrathi Construction</h1>
                     <div className="heading-underline"></div>
-                    <h3>Arts of Construction</h3>
+                    <h3>Art of Construction</h3>
                     <h3>30+ Years of Experiences</h3>
                 </div>
             </div>

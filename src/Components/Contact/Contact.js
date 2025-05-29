@@ -111,7 +111,7 @@ const Contact = () => {
             <br/>
 
           <p><strong><i className="fas fa-envelope" style={{fontSize: '0.7em'}}></i> Email Id:</strong><br />
-            sarrathicontruction@gmail.com</p>
+          build@sarrathiconstructions.com</p>
         </div>
 
         <div className="map-container">

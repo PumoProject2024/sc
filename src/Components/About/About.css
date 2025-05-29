@@ -43,14 +43,13 @@
 }
 
 .price-arrow span{
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* subtle dark shadow */
-    font-size: 20px;
+    font-size: 15px;
 }
 .price-highlight {
   color: #fff; /* White text */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Dark shadow for contrast */
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3); /* Light white shadow */
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 20px !important;
 }
 
 
