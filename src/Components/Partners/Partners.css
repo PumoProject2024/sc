@@ -2,6 +2,7 @@
   padding: 40px 20px;
   background-color: #f5f5f5;
   text-align: center;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .partners-container {
@@ -15,28 +16,21 @@
 .partners-section h1 {
   margin-bottom: 30px;
   width: 100%;
-  background-color: #091036;
-  color: #fff;
-}
-
-
-@media (min-width: 768px) {
-  .partners-container {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .partner-group {
-    width: 45%;
-  }
+  color: #333;
+  font-size: 24px;
 }
 
 .partner-group {
   background: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-left: 6px solid black;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  display: flex;
+  flex-direction: column;
 }
 
 .partner-group h3 {
@@ -45,16 +39,15 @@
   font-size: 1.6em;
 }
 
-.partner-group.vendors .partner-logos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-}
-
+/* Mobile-first approach - single column on small screens */
+.partner-group.vendors .partner-logos,
 .partner-group.banks .partner-logos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5em;
+  gap: 15px;
+  width: 100%;
+  flex: 1; /* This makes the logo container take up remaining space */
+  align-content: start; /* Align items to top of the grid */
 }
 
 .partner-item {
@@ -62,30 +55,106 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .partner-item img {
-  width: 140px;
-  height: 120px;
+  width: 100%;
+  max-width: 80px;
+  height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
   border-radius: 50%;
   background-color: white;
-  padding: 10px;
+  padding: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .partner-item img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .partner-item p {
   margin-top: 8px;
-  font-size: 0.95em;
+  font-size: 0.85em;
   color: #333;
 }
 
 .partner-item strong {
-  font-size: 1.4em;
+  font-size: 1.1em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.partners-container,
+.partner-group {
+  box-sizing: border-box;
+}
+
+/* Tablet styles */
+@media (min-width: 480px) {
+  .partner-group {
+    padding: 25px;
+  }
+  
+  .partner-item img {
+    max-width: 100px;
+    height: 80px;
+  }
+  
+  .partner-item p {
+    font-size: 0.9em;
+  }
+  
+  .partner-item strong {
+    font-size: 1.2em;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .partners-container {
+    flex-direction: row;
+    align-items: stretch; /* Make heights equal */
+  }
+
+  .partner-group {
+    width: 50%; /* Force both to take equal horizontal space */
+  }
+  
+  .partner-group.vendors .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .partner-group.banks .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    /* margin-top: 40px; */
+  }
+  
+  .partner-item img {
+    max-width: 140px;
+    height: 120px;
+    padding: 10px;
+  }
+  
+  .partner-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .partner-item p {
+    font-size: 0.95em;
+  }
+  
+  .partner-item strong {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 992px) {
+  .partner-group.vendors .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+  }
+   
 }

@@ -1,28 +1,22 @@
-import React from 'react';
 import './Header.css';
 
 const Header = () => {
     return (
         <header className="header-container">
             <div className="header-left">
-                <img src="/logo3.jpeg" alt="Sarrathi Logo" className="hero-logo" />
+                <img src="/images/logo6.png" alt="Sarrathi Logo" className="hero-logo" />
                 <div className="header-text">
                     <h1 className="company-name">Sarrathi Constructions</h1>
                     <div className="heading-underline"></div>
-                    <h3>Art of Construction</h3>
-                    <h3>30+ Years of Experiences</h3>
+                    <h3>Art of Construction </h3>
                 </div>
             </div>
-
-            <nav className="header-right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
+            <div className="header-contact">
+                <p>
+                    <i className="fas fa-phone" style={{ color: '#fff', marginRight: '8px' }}></i>
+                    +91 98405 24873 / 98407 98059
+                </p>
+            </div>
         </header>
     );
 };

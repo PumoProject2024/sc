@@ -1,117 +1,50 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    contact: '',
-    email: '',
-    location: '',
-    message: ''
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs.send(
-      'service_mc8o6ig',       // e.g., 'service_abc123'
-      'template_zqto05t',      // e.g., 'template_xyz456'
-      formData,
-      'SVIfNeyxJHRHMt_4_'        // e.g., 'ABCdefGHIjkl123456'
-    )
-    .then((result) => {
-      alert("Your message is successfully sent. Kindly wait until we get back to you.");
-      setFormData({
-        name: '',
-        contact: '',
-        email: '',
-        location: '',
-        message: ''
-      });
-    }, (error) => {
-      alert("Something went wrong. Please try again later.");
-      console.error(error);
-    });
-  };
-
+ 
   return (
     <section id="contact">
-      <h1>Contact Us</h1>
       <div className="contact-container">
-        <div className="contact-enqiury">
-          <form onSubmit={handleSubmit}>
-            <br />
-            <input 
-              type="text" 
-              name="name"
-              placeholder="Your Name" 
-              value={formData.name}
-              onChange={handleInputChange}
-              required 
-            />
-            <input 
-              type="tel" 
-              name="contact"
-              placeholder="Contact No" 
-              value={formData.contact}
-              onChange={handleInputChange}
-              required 
-              pattern="[6-9]{1}[0-9]{9}" 
-              maxLength="10" 
-            />
-            <input 
-              type="email" 
-              name="email"
-              placeholder="Email Address" 
-              value={formData.email}
-              onChange={handleInputChange}
-              required 
-            />
-            <input 
-              type="text" 
-              name="location"
-              placeholder="Your Location" 
-              value={formData.location}
-              onChange={handleInputChange}
-              required 
-            />
-            <textarea 
-              name="message"
-              placeholder="Your Message" 
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-            ></textarea>
-            <button type="submit"><strong>Send Message</strong></button>
-          </form>
-        </div>
-
         <div className="contact-info">
-          <p><strong>Office Address:</strong><br />
-            82, Jagannathan Salai, Anjugam Nagar<br />
-            SRP Colony, Kolathur, Chennai,<br />
-            Tamil Nadu 600082.</p>
-            <br/>
+          <h1>Meet Us</h1>
+          {/* First Row */}
+          <div className="contact-row">
+           
+            <div className="contact-item">
+              <div className="icon-container">
+                <i className="fas fa-phone"></i>
+              </div>
+              <div className="contact-details">
+                <strong>Phone Number</strong>
+                <p>+91 98405 24873 / 98407 98059</p>
+              </div>
+            </div>
+            
+            <div className="contact-item">
+              <div className="icon-container">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <div className="contact-details">
+                <strong>Email Id</strong>
+                <p>build@sarrathiconstructions.com</p>
+              </div>
+            </div>
+          </div>
 
-          <p><strong>Contact Person:</strong><br />
-            Vasudevan K/ Parthasarrathi V</p>
-                      <br/>
-
-          <p><strong><i className="fas fa-phone" style={{fontSize: '0.7em'}}></i> Phone Number:</strong><br />
-            +91 98407 98059/ 98405 24873</p>
-            <br/>
-
-          <p><strong><i className="fas fa-envelope" style={{fontSize: '0.7em'}}></i> Email Id:</strong><br />
-          build@sarrathiconstructions.com</p>
+          {/* Second Row */}
+          <div className="contact-row">
+            <div className="contact-item address-item">
+              <div className="icon-container">
+                <i className="fas fa-map-marker-alt"></i>
+              </div>
+              <div className="contact-details">
+                <strong>Office Address</strong>
+                <p>82, Jagannathan Salai, Anjugam Nagar<br />
+                   SRP Colony, Kolathur, Chennai,<br />
+                   Tamil Nadu 600082.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="map-container">

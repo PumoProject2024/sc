@@ -1,93 +1,123 @@
 .contact-container {
   display: flex;
   flex-direction: column;
-  /* For mobile */
-  gap: 2em;
+  gap: 1em;
   width: 100%;
   font-size: larger;
   margin-top: 0;
   padding-top: 0;
-  background-color: #0a2048;
-  /* Bootstrap blue */
+  background-color: white;
   color: white;
 }
 
 #contact h1 {
-  margin-bottom: 30px;
-  /* or any value you prefer */
-}
-
-.contact-enqiury,
-.map-container {
-  flex: 1;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  /* Light translucent overlay */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 100%;
+  background: linear-gradient(135deg, #FFC324, #FFB300, #FF8C00);
   color: white;
+  text-align: center;
+}
+.contact-info,
+.map-container {
+  padding: 15px;
 }
 
 .contact-info {
   flex: 1;
-  padding: 30px;
+  padding: 15px;
   background: rgba(255, 255, 255, 0.1);
-  /* Light translucent overlay */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: black;
+  font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 180px;
+  flex: 1;
+  max-width: 260px;
+}
+
+.address-item {
+  max-width: 100%;
+  flex: none;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  color: #ffb200;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+.icon-container i {
+  font-size: 28px;
+  color: linear-gradient(135deg, #FFC324, #FFB300, #FF8C00)
+}
+
+.contact-details {
+  text-align: center;
+}
+
+.contact-details strong {
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.map-container {
+  flex: 1;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   color: white;
-  font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
 }
-.contact-info p strong{
- font-size: 22px;
-}
-.contact-info p{
-  font-size: 18px;
+
+.map-container iframe {
+  flex: 1;
+  min-height: 300px;
+  border-radius: 10px;
 }
 
 /* Hover effect */
-.contact-enqiury:hover,
 .contact-info:hover,
 .map-container:hover {
   transform: translateY(-5px);
-}
-
-.contact-enqiury {
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-input,
-textarea {
-  margin: 10px 0;
-  padding: 12px;
-  font-size: 1.1em;
-  font-family: 'Times New Roman', Times, serif;
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 5px;
-}
-
-button {
-  padding: 12px;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: medium;
-}
-
-button:hover {
-  background: #555;
 }
 
 @media (min-width: 768px) {
@@ -95,27 +125,36 @@ button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    min-height: 350px;
   }
 
   .contact-info {
     order: 1;
-  }
-
-  .contact-enqiury {
-    order: 2;
+    flex: 1; /* Changed from flex: 2 to flex: 1 */
   }
 
   .map-container {
-    order: 3;
+    order: 2;
+    flex: 1; /* This remains flex: 1 */
+  }
+
+  .map-container iframe {
+    min-height: 90%;
   }
 }
 
-#contact h1 {
-  text-align: center;
-  /* Centers all inline content like <h1> inside */
-}
+@media (max-width: 767px) {
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.contact-info strong {
-  font-size: 1.3em;
-  /* Adjust as needed */
+  .contact-item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .map-container iframe {
+    min-height: 300px;
+  }
 }

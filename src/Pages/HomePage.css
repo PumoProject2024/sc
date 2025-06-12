@@ -1,0 +1,131 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header styling to ensure it stays above sidebar */
+.homepage-container header {
+  position: relative;
+  z-index: 20; /* Higher than sidebar z-index */
+  width: 100%;
+  background-color: #ffc924; /* Match your header color */
+  height: 90px;
+}
+
+.homepage-body {
+  display: flex;
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 100vw; /* Ensure it doesn't exceed viewport width */
+  min-height: calc(100vh - 200px); /* Account for header and footer space */
+}
+
+/* Make sure the sidebar doesn't extend beyond the body area */
+.homepage-body .sidebar {
+  position: absolute; /* Changed back to absolute to contain within homepage-body */
+  top: 0; /* Relative to homepage-body container */
+  left: 0;
+  height: 100%; /* Full height of the body container only */
+  width: 100px; /* Define explicit width */
+  z-index: 10;
+  background-color: #fff; /* Add background color if needed */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional: add shadow for better separation */
+}
+
+.homepage-content {
+  margin-left: 100px; /* Match sidebar width */
+  padding: 20px;
+  flex: 1;
+  background-color: #f9fafb;
+  min-height: 100%; /* Full height of the container */
+  width: calc(100% - 100px); /* Container width minus sidebar */
+  max-width: calc(100% - 100px);
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+/* Mobile menu toggle button */
+.mobile-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+/* Tablet devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .homepage-content {
+    padding: 16px;
+  }
+
+  .homepage-body .sidebar {
+    width: 80px;
+  }
+
+  .homepage-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+    max-width: calc(100% - 80px);
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .homepage-content {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .homepage-body .sidebar {
+    transform: translateX(-100%); /* Hide sidebar */
+    transition: transform 0.3s ease;
+    position: fixed; /* So it can slide in */
+    height: 100vh;
+    z-index: 30;
+  }
+
+  /* Optional: Toggle class for showing sidebar on mobile */
+  .homepage-body .sidebar.show {
+    transform: translateX(0);
+  }
+}
+
+/* Small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .homepage-content {
+    padding: 10px;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  .homepage-body {
+    flex-direction: column;
+  }
+
+  .homepage-body .sidebar {
+    width: 100%; /* Full width sidebar on small screens */
+  }
+
+  .homepage-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

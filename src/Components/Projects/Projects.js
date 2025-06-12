@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Projects.css';
+import Partners from '../Partners/Partners';
 
 const Projects = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -106,7 +107,7 @@ const Projects = () => {
                     <button className="next" onClick={(e) => { e.stopPropagation(); changeImage(1); }}>&#10095;</button>
                 </div>
             )}
-
+            <Partners />
         </section>
     );
 };

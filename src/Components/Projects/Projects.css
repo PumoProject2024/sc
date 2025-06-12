@@ -1,13 +1,20 @@
 .projects-section {
   text-align: center;
   padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden; /* Prevent any overflow from the section */
 }
 
 .projects-section h1 {
   margin-bottom: 30px;
   width: 100%;
-  background-color: #091036;
-  color: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+    font-size: 24px;
 
 }
 
@@ -20,12 +27,43 @@
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   scroll-snap-type: x mandatory;
+  /* Fixed width calculation to prevent overflow */
+  width: 100%;
+  max-width: calc(100vw - 140px); /* Account for sidebar + padding + margins */
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* Add scrollbar styling for better UX */
+  scrollbar-width: thin;
+  scrollbar-color: #FFC324 #f4f4f4;
+}
+
+/* Webkit scrollbar styling */
+.project-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-gallery::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FFC324, #FFB300);
+  border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #FFB300, #FF8C00);
 }
 
 .project-gallery img {
   flex: 0 0 auto;
-  width: 450px;
-  height: 325px;
+  width: min(400px, 70vw); /* Reduced max width to prevent overflow */
+  height: min(300px, 52.5vw); /* Adjusted height to maintain aspect ratio */
+  max-width: 400px;
+  max-height: 300px;
+  min-width: 200px;
+  min-height: 150px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -34,8 +72,62 @@
 }
 
 .project-gallery img:hover {
-  transform: scale(1.07);
+  transform: scale(1.03); /* Reduced scale to prevent overflow */
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .project-gallery {
+    max-width: calc(100vw - 120px);
+  }
+  
+  .project-gallery img {
+    width: min(350px, 65vw);
+    height: min(260px, 48vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 1em 0.5em;
+  }
+  
+  .project-gallery {
+    gap: 15px;
+    padding: 15px;
+    max-width: calc(100vw - 40px);
+  }
+  
+  .project-gallery img {
+    width: min(300px, 75vw);
+    height: min(225px, 56vw);
+    min-width: 180px;
+    min-height: 135px;
+  }
+  
+  .project-gallery img:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 1em 0.25em;
+  }
+  
+  .project-gallery {
+    max-width: calc(100vw - 20px);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .project-gallery img {
+    width: min(250px, 80vw);
+    height: min(187px, 60vw);
+    min-width: 150px;
+    min-height: 112px;
+  }
 }
 
 .lightbox {
@@ -79,6 +171,14 @@
   font-weight: bold;
   user-select: none;
   transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev {
@@ -93,7 +193,9 @@
 .next:hover,
 .close:hover {
   color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.7);
 }
+
 /* Allow interaction for the wrapper */
 .image-wrapper {
   position: relative;
@@ -112,12 +214,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
 }
+
 .lightbox-image {
   user-select: none;
   -webkit-user-drag: none;
-  pointer-events: none; /* Optional: blocks all interaction */
+  pointer-events: none;
 }
-
 
 /* Prevent right-click and download */
 .overlay-blocker {
@@ -128,8 +230,9 @@
   width: 100%;
   z-index: 2;
   background: transparent;
-  pointer-events: none; /* allow clicks to pass through */
+  pointer-events: none;
 }
+
 .lightbox-image-wrapper {
   position: relative;
   display: inline-block;
@@ -142,12 +245,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.5); /* White but semi-transparent */
+  color: rgba(255, 255, 255, 0.5);
   font-size: 20px;
   font-weight: normal;
-  background: none; /* No background box */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Soft glow for readability */
+  background: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
-
-

@@ -1,5 +1,5 @@
 footer {
-  background: #0a2048;
+    background: linear-gradient(135deg, #FFC324, #FFB300, #FF8C00); /* mango multicolor */
   color: white;
   text-align: center;
   padding: 1em 0;
