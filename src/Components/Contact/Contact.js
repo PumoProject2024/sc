@@ -96,16 +96,6 @@ const Contact = () => {
               Enter valid mobile number and email address to connect with our technical team
             </div>
 
-            {submitStatus === 'success' && (
-              <div className="status-message success">
-                Thank you for contacting us. You will receive a call from our technical team soon.              </div>
-            )}
-
-            {submitStatus === 'error' && (
-              <div className="status-message error">
-                Sorry, there was an error submitting your request. Please try again.
-              </div>
-            )}
 
             <form onSubmit={handleSubmit} className="consultation-form">
               <div className="form-group">
@@ -159,6 +149,17 @@ const Contact = () => {
                   rows="4"
                 />
               </div>
+              
+            {submitStatus === 'success' && (
+              <div className="status-message success">
+                Thank you for contacting us. You will receive a call from our technical team soon.              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="status-message error">
+                Sorry, there was an error submitting your request. Please try again.
+              </div>
+            )}
 
               <button
                 type="submit"
