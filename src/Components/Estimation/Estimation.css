@@ -1,0 +1,294 @@
+/* Estimation.css */
+
+.estimation-container {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    padding: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(1, 1, 78);
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/* Package Selection */
+.package-selection {
+    margin-bottom: 2rem;
+}
+
+.package-selection h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.package-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #d1d5db;
+    background-color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 150px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.package-card:hover {
+    border-color: #f3c53e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.package-card.selected {
+    border-color: #f3c53e;
+    background-color: #f3c53e;
+    box-shadow: 0 8px 15px rgba(59, 130, 246, 0.2);
+    transform: scale(1.05);
+}
+
+.package-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(1, 1, 78);
+    margin-bottom: 0.25rem;
+}
+
+.package-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Section - Form */
+.left-section {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.estimation-form h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgb(1, 1, 78);
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.form-group input::placeholder {
+    color: rgb(1, 1, 78);
+}
+
+/* Right Section - Table */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.calculation-table {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex: 1;
+}
+
+.calculation-table h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th {
+    background-color: #f9fafb;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+    border-bottom: 2px solid #e5e7eb;
+}
+
+table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: rgb(1, 1, 78);
+}
+
+table tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Total Estimation Box */
+.total-estimation {
+    background-color: #f3c53e;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #f3c53e;
+}
+
+.total-estimation h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(1, 1, 78);
+    margin-bottom: 1rem;
+}
+
+.total-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(1, 1, 78);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .package-cards {
+        gap: 1rem;
+    }
+
+    .package-card {
+        min-width: 120px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .estimation-container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .package-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card {
+        width: 200px;
+    }
+
+    .left-section,
+    .calculation-table,
+    .total-estimation {
+        padding: 1.5rem;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+
+    .total-amount {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .package-card {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .left-section,
+    .calculation-table,
+    .total-estimation {
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 0.75rem;
+    }
+
+    .total-amount {
+        font-size: 1.25rem;
+    }
+}

@@ -23,6 +23,21 @@ const Sidebar = ({ setActiveComponent, showSidebar }) => {
       label: 'Estimation',
       id: 'estimation'
     },
+          {
+      icon: () => <img src="/images/packages.svg" alt="Package" style={{ width: '30px', height: '30px' }} />,
+      label: 'Package',
+      id: 'package'
+    },
+    {
+      icon: () => <img src="/images/address-card.svg" alt="About Us" style={{ width: '30px', height: '30px' }} />,
+      label: 'About Us',
+      id: 'aboutus'
+    },
+     {
+      icon: () => <img src="/images/customer.svg" alt="testimonials" style={{ width: '30px', height: '30px' }} />,
+      label: 'Testimonials',
+      id: 'testimonials'
+    },
     {
       icon: () => <img src="/images/contact.svg" alt="Contact Us" style={{ width: '30px', height: '30px' }} />,
       label: 'Contact Us',

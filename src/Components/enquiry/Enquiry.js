@@ -4,6 +4,8 @@ import './Enquiry.css';
 import { Calendar, Hammer, Mail, MapPin, Phone, User, CheckCircle } from 'lucide-react';
 import Contact from '../Contact/Contact';
 import Projects from '../Projects/Projects';
+import Testimonials from '../Testimonials/Testimonials';
+
 
 export const Enquiry = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +56,7 @@ export const Enquiry = () => {
         <div className="contact-content">
           <div className="contact-enquiry">
             <form onSubmit={handleSubmit}>
-              <h1>Get in Touch</h1>
+              <h1>Your Vision, Our Expertise – Free Consultation</h1>
 
               <div className="input-with-icon">
                 <User size={18} />
@@ -158,19 +160,21 @@ export const Enquiry = () => {
                 Each structure is thoughtfully crafted to inspire, endure, and enhance everyday life. We are committed to delivering lasting value and building enduring client relationships.
               </p>
               <ul className="why-points">
-                <li><CheckCircle size={18} color="#28a745" /> 30+ Years of Experience</li>
-                <li><CheckCircle size={18} color="#28a745" /> Uncompromising Quality</li>
-                <li><CheckCircle size={18} color="#28a745" /> Client-Centric Approach</li>
-                <li><CheckCircle size={18} color="#28a745" /> On-Time, On-Budget Delivery</li>
-                <li><CheckCircle size={18} color="#28a745" /> Experienced & Skilled Team</li>
-                <li><CheckCircle size={18} color="#28a745" /> 10-Year Structural Warranty</li>
+                <li><CheckCircle size={18} color="#f97316" /> 30+ Years of Experience</li>
+                <li><CheckCircle size={18} color="#f97316" /> Uncompromising Quality</li>
+                <li><CheckCircle size={18} color="#f97316" /> Client-Centric Approach</li>
+                <li><CheckCircle size={18} color="#f97316" /> On-Time, On-Budget Delivery</li>
+                <li><CheckCircle size={18} color="#f97316" /> Experienced & Skilled Team</li>
+                <li><CheckCircle size={18} color="#f97316" /> 10-Year Structural Warranty</li>
+
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <Projects/>
-      <Contact/>
+      <Projects />
+      <Testimonials />
+      <Contact />
     </section>
   );
 };

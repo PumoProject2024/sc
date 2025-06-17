@@ -4,11 +4,11 @@ const Header = () => {
     return (
         <header className="header-container">
             <div className="header-left">
-                <img src="/images/logo6.png" alt="Sarrathi Logo" className="hero-logo" />
+                <img src="/images/logo8.jpeg" alt="Sarrathi Logo" className="hero-logo" />
                 <div className="header-text">
-                    <h1 className="company-name">Sarrathi Constructions</h1>
+                    <h1 className="company-name">SARRATHI CONSTRUCTIONS</h1>
                     <div className="heading-underline"></div>
-                    <h3>Art of Construction </h3>
+                    <h3>ART OF CONSTRUCTION </h3>
                 </div>
             </div>
             <div className="header-contact">

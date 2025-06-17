@@ -15,9 +15,7 @@
 .contact-enquiry {
   flex: 1 1 100%;
   max-width: 500px;
-  /* Set a max width */
   margin: 0 auto;
-  /* Center the form */
 }
 
 
@@ -28,8 +26,8 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)),
-    url('/public//images/cardbg.jpeg') no-repeat center center;
+  background: linear-gradient(rgba(78, 75, 75, 0.8),rgba(78, 75, 75, 0.8)),
+    url('/public//images/cardbgi.jpeg') no-repeat center center;
   background-size: cover;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -44,14 +42,14 @@
 .enquiry-info h2 {
   font-size: 1.8em;
   margin-bottom: 15px;
-  color: rgb(1, 1, 78);
+  color: white;
   text-align: center;
 }
 
 .why-text {
   font-size: 1em;
   margin-bottom: 20px;
-  color: rgb(1, 1, 78);
+  color: white;
   font-weight: 600;
 }
 
@@ -68,7 +66,7 @@
   align-items: center;
   gap: 10px;
   font-size: 1.05em;
-  color: rgb(1, 1, 78);
+  color: white;
   font-family: 'Times New Roman', Times, serif;
   line-height: 1.4;
   font-weight: 600;
@@ -143,9 +141,7 @@ form {
   margin: 0 auto;
   padding-top: 10px;
   border-top: 5px solid #FFD700;
-  /* Yellow line */
   max-width: 450px;
-  /* Optional: limit form width */
   background: white;
   border-radius: 8px;
 }
@@ -155,7 +151,7 @@ form {
   text-align: left;
   font-weight: bold;
   line-height: 1.2;
-background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed */
+  background-color: #2b2b2b;
   padding: 12px 16px;
   border-radius: 6px;
   width: 55%;
@@ -189,6 +185,7 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   display: inline-block;
   margin-left: 30px;
 }
+
 /* Keep your existing desktop styles as they are */
 
 /* Large Desktop (1200px and up) */
@@ -196,11 +193,11 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 3em;
   }
-  
+
   .contact-content {
     gap: 3em;
   }
-  
+
   .contact-enquiry {
     max-width: 550px;
   }
@@ -211,7 +208,7 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 2.5em;
   }
-  
+
   .contact-content {
     gap: 2.5em;
   }
@@ -222,12 +219,13 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 2em 1.5em;
   }
-  
+
   .contact-content {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
+    /* Stack vertically */
     gap: 2em;
   }
-  
+
   /* Show enquiry-info first on tablet */
   .enquiry-info {
     order: 1;
@@ -235,30 +233,30 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
     max-width: 100%;
     min-width: auto;
   }
-  
+
   .contact-enquiry {
     order: 2;
     flex: 1;
     max-width: 100%;
   }
-  
+
   .why-points {
     grid-template-columns: 1fr 1fr;
     gap: 10px 15px;
   }
-  
+
   .why-points li {
     font-size: 1em;
   }
-  
+
   .price-highlight {
     width: 60%;
   }
-  
+
   .line2 {
     margin-left: 60px;
   }
-  
+
   .line3 {
     margin-left: 20px;
   }
@@ -269,12 +267,12 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 1.5em 1em;
   }
-  
+
   .contact-content {
     flex-direction: column;
     gap: 1.5em;
   }
-  
+
   /* Show enquiry-info first */
   .enquiry-info {
     order: 1;
@@ -282,52 +280,52 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
     max-width: 100%;
     min-width: auto;
   }
-  
+
   .contact-enquiry {
     order: 2;
     flex: 1;
     max-width: 100%;
   }
-  
+
   .enquiry-info h2 {
     font-size: 1.6em;
   }
-  
+
   .why-text {
     font-size: 0.95em;
   }
-  
+
   .why-points {
     grid-template-columns: 1fr;
     gap: 8px;
   }
-  
+
   .why-points li {
     font-size: 0.95em;
   }
-  
+
   .Enquriy h1 {
     font-size: 1.4em;
   }
-  
+
   form {
     max-width: 100%;
     padding: 15px;
   }
-  
+
   .price-highlight {
     width: 50%;
   }
-  
+
   .line1 {
     font-size: 18px;
   }
-  
+
   .line2 {
     font-size: 16px;
     margin-left: 50px;
   }
-  
+
   .line3 {
     font-size: 19px;
     margin-left: 15px;
@@ -339,12 +337,12 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 1em 0.8em;
   }
-  
+
   .contact-content {
     flex-direction: column;
     gap: 1.2em;
   }
-  
+
   /* Show enquiry-info first */
   .enquiry-info {
     order: 1;
@@ -352,75 +350,75 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
     max-width: 100%;
     min-width: auto;
   }
-  
+
   .contact-enquiry {
     order: 2;
     flex: 1;
     max-width: 100%;
   }
-  
+
   .enquiry-info-content {
     padding: 15px;
   }
-  
+
   .enquiry-info h2 {
     font-size: 1.4em;
     margin-bottom: 12px;
   }
-  
+
   .why-text {
     font-size: 0.9em;
     margin-bottom: 15px;
   }
-  
+
   .why-points {
     grid-template-columns: 1fr;
     gap: 6px;
   }
-  
+
   .why-points li {
     font-size: 0.9em;
   }
-  
+
   .Enquriy h1 {
     font-size: 1.3em;
     margin-bottom: 15px;
   }
-  
+
   form {
     max-width: 100%;
     padding: 12px;
     gap: 14px;
   }
-  
+
   .input-with-icon {
     padding: 8px 12px;
   }
-  
+
   .input-with-icon input,
   .input-with-icon select {
     min-height: 32px;
     font-size: 0.95em;
   }
-  
+
   button {
     padding: 10px;
     font-size: 0.95em;
   }
-  
+
   .price-highlight {
     width: 60%;
   }
-  
+
   .line1 {
     font-size: 16px;
   }
-  
+
   .line2 {
     font-size: 14px;
     margin-left: 40px;
   }
-  
+
   .line3 {
     font-size: 17px;
     margin-left: 10px;
@@ -430,90 +428,103 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
 /* Mobile Small (up to 479px) */
 @media (max-width: 479px) {
   .enquiry-container {
-    padding: 0.8em 0.5em;
+    padding: 1em 0.5em;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
-  
+
   .contact-content {
     flex-direction: column;
     gap: 1em;
+    width: 100%;
+    max-width: 100%;
   }
-  
+
   /* Show enquiry-info first */
   .enquiry-info {
     order: 1;
     flex: 1;
     max-width: 100%;
     min-width: auto;
+    width: 100%;
   }
-  
+
   .contact-enquiry {
     order: 2;
-    flex: 1;
-    max-width: 100%;
+    width: 100%; /* Changed from 100vw to 100% */
+    max-width: 100%; /* Ensure it doesn't exceed container */
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
   }
-  
+
   .enquiry-info-content {
     padding: 12px;
   }
-  
+
   .enquiry-info h2 {
     font-size: 1.2em;
     margin-bottom: 10px;
   }
-  
+
   .why-text {
     font-size: 0.85em;
     margin-bottom: 12px;
   }
-  
+
   .why-points {
     grid-template-columns: 1fr;
     gap: 5px;
   }
-  
+
   .why-points li {
     font-size: 0.85em;
   }
-  
+
   .Enquriy h1 {
     font-size: 1.2em;
     margin-bottom: 12px;
   }
-  
+
   form {
+    width: 100%;
     max-width: 100%;
-    padding: 10px;
-    gap: 12px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Added for proper sizing */
   }
-  
+
   .input-with-icon {
     padding: 6px 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
-  
+
   .input-with-icon input,
   .input-with-icon select {
-    min-height: 30px;
-    font-size: 0.9em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Prevent overflow from padding/border */
+    border: none; /* Remove default borders that might add extra width */
+    outline: none;
   }
-  
-  button {
-    padding: 8px;
-    font-size: 0.9em;
-  }
-  
+
+ 
+
   .price-highlight {
     width: 70%;
+    max-width: 100%; /* Prevent overflow */
   }
-  
+
   .line1 {
     font-size: 14px;
   }
-  
+
   .line2 {
     font-size: 12px;
     margin-left: 30px;
   }
-  
+
   .line3 {
     font-size: 15px;
     margin-left: 5px;
@@ -525,53 +536,53 @@ background-color: rgba(78, 75, 75, 0.8); /* Adjust 0.7 to 0.5 or lower as needed
   .enquiry-container {
     padding: 0.6em 0.3em;
   }
-  
+
   .enquiry-info-content {
     padding: 10px;
   }
-  
+
   .enquiry-info h2 {
     font-size: 1.1em;
   }
-  
+
   .why-text {
     font-size: 0.8em;
   }
-  
+
   .why-points li {
     font-size: 0.8em;
   }
-  
+
   .Enquriy h1 {
     font-size: 1.1em;
   }
-  
+
   form {
     padding: 8px;
   }
-  
+
   .input-with-icon input,
   .input-with-icon select {
     font-size: 0.85em;
   }
-  
+
   button {
     font-size: 0.85em;
   }
-  
+
   .price-highlight {
     width: 80%;
   }
-  
+
   .line1 {
     font-size: 12px;
   }
-  
+
   .line2 {
     font-size: 10px;
     margin-left: 20px;
   }
-  
+
   .line3 {
     font-size: 13px;
     margin-left: 0;

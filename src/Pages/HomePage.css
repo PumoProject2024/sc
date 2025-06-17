@@ -11,7 +11,7 @@
   position: relative;
   z-index: 20; /* Higher than sidebar z-index */
   width: 100%;
-  background-color: #ffc924; /* Match your header color */
+  background-color: #f3c53e; /* Match your header color */
   height: 90px;
 }
 
@@ -26,8 +26,8 @@
 
 /* Make sure the sidebar doesn't extend beyond the body area */
 .homepage-body .sidebar {
-  position: absolute; /* Changed back to absolute to contain within homepage-body */
-  top: 0; /* Relative to homepage-body container */
+  position: fixed; /* Changed back to absolute to contain within homepage-body */
+  top: -130px; /* Relative to homepage-body container */
   left: 0;
   height: 100%; /* Full height of the body container only */
   width: 100px; /* Define explicit width */
@@ -51,12 +51,12 @@
 .mobile-toggle {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 33px;
   left: 20px;
   z-index: 1000;
   background: none;
   border: none;
-  font-size: 28px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -108,8 +108,18 @@
 
 /* Small devices (max-width: 480px) */
 @media (max-width: 480px) {
-  .homepage-content {
-    padding: 10px;
+   .homepage-content {
+    padding: 0; /* Remove padding if it's causing space */
+    width: 100vw; /* Force full viewport width */
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding doesn’t reduce actual width */
+  }
+  .mobile-toggle {
+    display: block;
+    top: 30px;
+    left: 20px;
+    z-index: 1100; /* Make sure it's above sidebar */
+    color: #000;
   }
 
   header {
@@ -121,11 +131,18 @@
   }
 
   .homepage-body .sidebar {
-    width: 100%; /* Full width sidebar on small screens */
-  }
-
-  .homepage-content {
-    margin-left: 0;
-    width: 100%;
+    width: 22%; /* Full width sidebar on small screens */
+    height: 120%;
   }
 }
+
+@media (max-width:380px){
+     .mobile-toggle {
+    display: block;
+    top: 30px;
+    left: 2px;
+    z-index: 1100; /* Make sure it's above sidebar */
+    color: #000;
+  }
+}
+  
