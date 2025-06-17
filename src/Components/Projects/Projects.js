@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Projects.css';
 import Partners from '../Partners/Partners';
+import WhatsAppButton from '../Whatsapp/WhatsAppButton';
 
 const Projects = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -108,6 +109,11 @@ const Projects = () => {
                 </div>
             )}
             <Partners />
+              <WhatsAppButton
+        phone="919840524873"
+        message="Hello Sarrathi Constructions, Can I get more info on package details?"
+        size={48}
+      />
         </section>
     );
 };

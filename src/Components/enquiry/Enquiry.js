@@ -5,6 +5,8 @@ import { Calendar, Hammer, Mail, MapPin, Phone, User, CheckCircle } from 'lucide
 import Contact from '../Contact/Contact';
 import Projects from '../Projects/Projects';
 import Testimonials from '../Testimonials/Testimonials';
+import WhatsAppButton from '../Whatsapp/WhatsAppButton';
+
 
 
 export const Enquiry = () => {
@@ -175,6 +177,11 @@ export const Enquiry = () => {
       <Projects />
       <Testimonials />
       <Contact />
+      <WhatsAppButton
+        phone="919840524873"
+        message="Hello Sarrathi Constructions, Can I get more info on package details?"
+        size={48}
+      />
     </section>
   );
 };

@@ -2,7 +2,7 @@
 
 .estimation-container {
     min-height: 100vh;
-    background-color: #f8fafc;
+    background: linear-gradient(135deg, #f5f1e8 0%, #faf6ed 100%);
     padding: 2rem;
     font-family: 'Times New Roman', Times, serif;
 }

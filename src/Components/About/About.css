@@ -49,8 +49,8 @@
 
 .image-container {
   position: relative;
-  width: 250px;
-  height: 400px;
+  width: 350px;
+  height: 420px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -241,8 +241,8 @@
   }
   
   .image-container {
-    width: 220px; /* Smaller on mobile */
-    height: 280px; /* Reduced height */
+    width: 250px; /* Smaller on mobile */
+    height: 320px; /* Reduced height */
   }
   
   .floating-coin {

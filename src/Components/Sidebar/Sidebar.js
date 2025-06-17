@@ -8,6 +8,11 @@ const Sidebar = ({ setActiveComponent, showSidebar }) => {
       label: 'Home',
       id: 'home'
     },
+     {
+      icon: () => <img src="/images/address-card.svg" alt="About Us" style={{ width: '30px', height: '30px' }} />,
+      label: 'About Us',
+      id: 'aboutus'
+    },
     {
       icon: () => <img src="/images/services.svg" alt="Services" style={{ width: '30px', height: '30px' }} />,
       label: 'Services',
@@ -28,11 +33,7 @@ const Sidebar = ({ setActiveComponent, showSidebar }) => {
       label: 'Package',
       id: 'package'
     },
-    {
-      icon: () => <img src="/images/address-card.svg" alt="About Us" style={{ width: '30px', height: '30px' }} />,
-      label: 'About Us',
-      id: 'aboutus'
-    },
+   
      {
       icon: () => <img src="/images/customer.svg" alt="testimonials" style={{ width: '30px', height: '30px' }} />,
       label: 'Testimonials',

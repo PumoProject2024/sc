@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Package.css';
+import WhatsAppButton from '../Whatsapp/WhatsAppButton';
 
 const Package = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -361,6 +362,11 @@ const Package = () => {
           </div>
         </div>
       )}
+        <WhatsAppButton
+        phone="919840524873"
+        message="Hello Sarrathi Constructions, Can I get more info on package details?"
+        size={48}
+      />
     </div>
   );
 };

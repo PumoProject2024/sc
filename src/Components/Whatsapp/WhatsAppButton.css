@@ -1,0 +1,31 @@
+/* src/components/WhatsAppButton.css */
+.wa-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  color: #fff;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-btn:hover,
+.wa-btn:focus {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 480px) {
+  .wa-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px;
+  }
+}

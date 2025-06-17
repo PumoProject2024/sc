@@ -1,5 +1,6 @@
 import React from 'react';
 import './Services.css';
+import WhatsAppButton from '../Whatsapp/WhatsAppButton';
 
 const Services = () => {
   const services = [
@@ -79,6 +80,11 @@ const Services = () => {
           </div>
         ))}
       </div>
+        <WhatsAppButton
+        phone="919840524873"
+        message="Hello Sarrathi Constructions, Can I get more info on package details?"
+        size={48}
+      />
     </section>
   );
 };

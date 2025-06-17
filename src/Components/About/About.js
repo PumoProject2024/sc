@@ -1,3 +1,4 @@
+import WhatsAppButton from '../Whatsapp/WhatsAppButton';
 import './About.css';
 
 const About = () => {
@@ -18,7 +19,7 @@ const About = () => {
           <div className="about-image-section">
             <div className="image-container">
               <img
-                src="/images/cardbgi.jpeg"
+                src="/images/aboutus.jpeg"
                 alt="Business professionals"
                 className="about-image"
               />
@@ -42,6 +43,11 @@ const About = () => {
                 <div className="stat-label">Happy Customers</div>
               </div>
             </div>
+              <WhatsAppButton
+        phone="919840524873"
+        message="Hello Sarrathi Constructions, Can I get more info on package details?"
+        size={48}
+      />
     </section>
   );
 };
