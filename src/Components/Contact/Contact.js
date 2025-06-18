@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 import WhatsAppButton from '../Whatsapp/WhatsAppButton';
@@ -13,6 +13,37 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+
+  // Effect to handle body class when popup opens/closes
+  useEffect(() => {
+    if (showPopup) {
+      document.body.classList.add('popup-open');
+    } else {
+      document.body.classList.remove('popup-open');
+    }
+
+    // Cleanup function to remove class when component unmounts
+    return () => {
+      document.body.classList.remove('popup-open');
+    };
+  }, [showPopup]);
+
+  // Effect to handle Escape key
+  useEffect(() => {
+    const handleEscapeKey = (e) => {
+      if (e.key === 'Escape' && showPopup) {
+        closePopup();
+      }
+    };
+
+    if (showPopup) {
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [showPopup]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -96,7 +127,6 @@ const Contact = () => {
               Enter valid mobile number and email address to connect with our technical team
             </div>
 
-
             <form onSubmit={handleSubmit} className="consultation-form">
               <div className="form-group">
                 <label htmlFor="name">Name *</label>
@@ -152,7 +182,8 @@ const Contact = () => {
               
             {submitStatus === 'success' && (
               <div className="status-message success">
-                Thank you for contacting us. You will receive a call from our technical team soon.              </div>
+                Thank you for contacting us. You will receive a call from our technical team soon.
+              </div>
             )}
 
             {submitStatus === 'error' && (

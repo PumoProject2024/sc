@@ -14,7 +14,7 @@ const Estimation = () => {
     const packages = {
         basic: { name: 'BASIC', price: 2050, icon: '' },
         standard: { name: 'STANDARD', price: 2200, icon: '' },
-        premium: { name: 'PREMIUM', price: 2400, icon: '' }
+        premium: { name: 'PREMIUM', price: 2450, icon: '' }
     };
 
     const rates = {

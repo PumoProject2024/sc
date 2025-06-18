@@ -150,7 +150,6 @@
   background: white;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-
 }
 
 .form-group input:focus {
@@ -311,6 +310,9 @@
 
 .package-card.popular .topic-point {
   color: rgba(255, 255, 255, 0.9);
+}
+body.popup-open .mobile-toggle {
+  display: none !important;
 }
 
 @keyframes slideDown {

@@ -95,6 +95,9 @@
   animation: popupSlideIn 0.3s ease-out;
   border: 1px solid #e5e5e5;
 }
+body.popup-open .mobile-toggle {
+  display: none !important;
+}
 
 @keyframes popupSlideIn {
   from {

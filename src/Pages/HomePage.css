@@ -53,11 +53,12 @@
   position: absolute;
   top: 33px;
   left: 20px;
-  z-index: 1000;
+  z-index: 1000; /* Lower z-index than popup */
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
+  transition: opacity 0.3s ease; /* Smooth transition */
 }
 
 @media (max-width: 768px) {
@@ -114,11 +115,11 @@
     margin: 0;
     box-sizing: border-box; /* Ensures padding doesn’t reduce actual width */
   }
-  .mobile-toggle {
+   .mobile-toggle {
     display: block;
     top: 30px;
     left: 20px;
-    z-index: 1100; /* Make sure it's above sidebar */
+    z-index: 1100; /* Still lower than popup */
     color: #000;
   }
 
@@ -137,11 +138,11 @@
 }
 
 @media (max-width:380px){
-     .mobile-toggle {
+  .mobile-toggle {
     display: block;
     top: 30px;
     left: 2px;
-    z-index: 1100; /* Make sure it's above sidebar */
+    z-index: 1100; /* Still lower than popup */
     color: #000;
   }
 }

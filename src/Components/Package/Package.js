@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './Package.css';
 import WhatsAppButton from '../Whatsapp/WhatsAppButton';
@@ -42,6 +42,18 @@ const Package = () => {
       [name]: value
     }));
   };
+    useEffect(() => {
+      if (showPopup) {
+        document.body.classList.add('popup-open');
+      } else {
+        document.body.classList.remove('popup-open');
+      }
+  
+      // Cleanup function to remove class when component unmounts
+      return () => {
+        document.body.classList.remove('popup-open');
+      };
+    }, [showPopup]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -190,7 +202,7 @@ const Package = () => {
     },
     {
       name: 'PREMIUM',
-      price: '₹2400',
+      price: '₹2450',
       period: 'sqft',
       topics: [
         {
