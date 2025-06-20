@@ -61,6 +61,12 @@
   height: 100%;
   object-fit: cover;
 }
+.about-image {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 
 .floating-coin {
   position: absolute;

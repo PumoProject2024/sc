@@ -51,7 +51,47 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, [projectImages.length]);
 
+    // Only prevent image-specific download actions
+    useEffect(() => {
+        // Prevent right-click only on images
+        const handleImageContextMenu = (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        };
 
+        // Prevent dragging only images
+        const handleImageDragStart = (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        };
+
+        // Prevent image-specific keyboard shortcuts only when image is focused
+        const handleKeyDown = (e) => {
+            const focusedElement = document.activeElement;
+            const isImageFocused = focusedElement && focusedElement.tagName === 'IMG';
+            
+            if (isImageFocused && (e.ctrlKey || e.metaKey)) {
+                if (e.key === 's' || e.key === 'a' || e.key === 'c') {
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        };
+
+        document.addEventListener('contextmenu', handleImageContextMenu);
+        document.addEventListener('dragstart', handleImageDragStart);
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('contextmenu', handleImageContextMenu);
+            document.removeEventListener('dragstart', handleImageDragStart);
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
 
     const openLightbox = (index) => {
         setCurrentImageIndex(index);
@@ -87,6 +127,15 @@ const Projects = () => {
                         src={src}
                         alt={`Project ${currentSetIndex * imagesPerSet + index + 1}`}
                         onClick={() => openLightbox(currentSetIndex * imagesPerSet + index)}
+                        // Only prevent image-specific interactions
+                        onContextMenu={(e) => e.preventDefault()}
+                        onDragStart={(e) => e.preventDefault()}
+                        draggable={false}
+                        // Minimal styling to prevent downloads without blocking inspect
+                        style={{
+                            userSelect: 'none',
+                            WebkitUserDrag: 'none'
+                        }}
                     />
                 ))}
             </div>
@@ -100,6 +149,15 @@ const Projects = () => {
                                 className="lightbox-image"
                                 src={projectImages[currentImageIndex]}
                                 alt="Project"
+                                // Prevent lightbox image downloads
+                                onContextMenu={(e) => e.preventDefault()}
+                                onDragStart={(e) => e.preventDefault()}
+                                draggable={false}
+                                style={{
+                                    userSelect: 'none',
+                                    WebkitUserDrag: 'none',
+                                    pointerEvents: 'none'
+                                }}
                             />
                             <div className="lightbox-title-overlay">Sarrathi Constructions</div>
                         </div>
@@ -109,11 +167,11 @@ const Projects = () => {
                 </div>
             )}
             <Partners />
-              <WhatsAppButton
-        phone="919840524873"
-        message="Hello Sarrathi Constructions, Can I get more info on package details?"
-        size={48}
-      />
+            <WhatsAppButton
+                phone="919840524873"
+                message="Hello Sarrathi Constructions, Can I get more info on package details?"
+                size={48}
+            />
         </section>
     );
 };
