@@ -39,9 +39,20 @@ const Projects = () => {
         "/images/Prj/prj28.jpeg",
         "/images/Prj/prj29.jpeg",
         "/images/Prj/prj30.jpeg",
+        "/images/Prj/prj2.jpeg",
+        "/images/Prj/prj7.jpeg",
+        "/images/Prj/prj9.jpeg",
+        "/images/Prj/prj14.jpeg",
+        "/images/Prj/prj16.jpeg",
+        "/images/Prj/prj19.jpeg",
+        "/images/Prj/prj22.jpeg",
+        "/images/Prj/prj26.jpeg",
+        "/images/Prj/prj28.jpeg",
+        "/images/Prj/prj30.jpeg",
+
     ];
 
-    const imagesPerSet = 10;
+    const imagesPerSet = 20;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -73,7 +84,7 @@ const Projects = () => {
         const handleKeyDown = (e) => {
             const focusedElement = document.activeElement;
             const isImageFocused = focusedElement && focusedElement.tagName === 'IMG';
-            
+
             if (isImageFocused && (e.ctrlKey || e.metaKey)) {
                 if (e.key === 's' || e.key === 'a' || e.key === 'c') {
                     e.preventDefault();

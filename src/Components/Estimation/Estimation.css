@@ -2,7 +2,7 @@
 
 .estimation-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f1e8 0%, #faf6ed 100%);
+    background: #2a2a2a;
     padding: 2rem;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -15,7 +15,7 @@
 .header h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: rgb(1, 1, 78);
+    color:white;
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -28,7 +28,7 @@
 .package-selection h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: rgb(1, 1, 78);
+    color: white;
     margin-bottom: 1rem;
     text-align: center;
 }

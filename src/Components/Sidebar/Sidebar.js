@@ -1,69 +1,61 @@
-
+// Sidebar.js
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-const Sidebar = ({ setActiveComponent, showSidebar }) => {
+const Sidebar = ({ showSidebar }) => {
   const menuItems = [
     {
       icon: () => <img src="/images/home.svg" alt="Home" style={{ width: '30px', height: '30px' }} />,
       label: 'Home',
-      id: 'home'
+      path: '/home'
     },
-     {
+    {
       icon: () => <img src="/images/address-card.svg" alt="About Us" style={{ width: '30px', height: '30px' }} />,
       label: 'About Us',
-      id: 'aboutus'
+      path: '/aboutus'
     },
     {
       icon: () => <img src="/images/services.svg" alt="Services" style={{ width: '30px', height: '30px' }} />,
       label: 'Services',
-      id: 'services'
+      path: '/services'
     },
     {
       icon: () => <img src="/images/building-construction.svg" alt="Recent Project" style={{ width: '30px', height: '30px' }} />,
       label: 'Recent Project',
-      id: 'recentproject'
+      path: '/recentproject'
     },
     {
       icon: () => <img src="/images/calculator-minimalistic.svg" alt="Estimation" style={{ width: '30px', height: '30px' }} />,
       label: 'Estimation',
-      id: 'estimation'
+      path: '/estimation'
     },
-          {
+    {
       icon: () => <img src="/images/packages.svg" alt="Package" style={{ width: '30px', height: '30px' }} />,
       label: 'Package',
-      id: 'package'
+      path: '/package'
     },
-   
-     {
-      icon: () => <img src="/images/customer.svg" alt="testimonials" style={{ width: '30px', height: '30px' }} />,
+    {
+      icon: () => <img src="/images/customer.svg" alt="Testimonials" style={{ width: '30px', height: '30px' }} />,
       label: 'Testimonials',
-      id: 'testimonials'
+      path: '/testimonials'
     },
     {
       icon: () => <img src="/images/contact.svg" alt="Contact Us" style={{ width: '30px', height: '30px' }} />,
       label: 'Contact Us',
-      id: 'contactus'
+      path: '/contactus'
     }
   ];
-
-
-  const handleClick = (id) => {
-    setActiveComponent(id);
-  };
 
   return (
     <div className={`sidebar ${showSidebar ? 'show' : ''}`}>
       <nav className="sidebar-nav">
         <ul className="nav-list">
           {menuItems.map((item) => (
-            <li key={item.id} className="nav-item">
-              <button
-                className="nav-link"
-                onClick={() => handleClick(item.id)}
-              >
-                <item.icon size={24} className="nav-icon" />
+            <li key={item.path} className="nav-item">
+              <Link to={item.path} className="nav-link" onClick={() => window.scrollTo(0, 0)}>
+                <item.icon />
                 <span className="nav-label">{item.label}</span>
-              </button>
+              </Link>
             </li>
           ))}
         </ul>

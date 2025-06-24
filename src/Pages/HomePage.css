@@ -4,12 +4,15 @@
   min-height: 100vh;  
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal overflow */
+    z-index: auto;
+  font-family: 'Times New Roman', Times, serif;
+
 }
 
 /* Header styling to ensure it stays above sidebar */
 .homepage-container header {
   position: relative;
-  z-index: 20; /* Higher than sidebar z-index */
+  z-index: 9998; /* Higher than sidebar z-index */
   width: 100%;
   background-color: #f3c53e; /* Match your header color */
   height: 90px;
@@ -31,7 +34,7 @@
   left: 0;
   height: 100%; /* Full height of the body container only */
   width: 100px; /* Define explicit width */
-  z-index: 10;
+  z-index: 999;
   background-color: #fff; /* Add background color if needed */
   box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional: add shadow for better separation */
 }

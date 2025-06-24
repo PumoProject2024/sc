@@ -1,8 +1,15 @@
 import './Header.css';
 
-const Header = () => {
+const Header = ({ showSidebar, setShowSidebar }) => {
     return (
         <header className="header-container">
+            <button
+                className="header-mobile-toggle"
+                onClick={() => setShowSidebar(!showSidebar)}
+                aria-label="Toggle navigation"
+            >
+                ☰
+            </button>
             <div className="header-left">
                 <img src="/images/logo8.jpeg" alt="Sarrathi Logo" className="hero-logo" />
                 <div className="header-text">
