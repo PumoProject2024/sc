@@ -14,6 +14,7 @@ import Package from './Components/Package/Package';
 import Services from './Components/Services/Services';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Estimation from './Components/Estimation/Estimation';
+import usePageView from './hooks/usePageView'; 
 
 import './Pages/HomePage.css';
 
@@ -21,7 +22,8 @@ const AppContent = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();
 
-  // ✅ Auto-close sidebar on route change
+  usePageView(); // 👈 This tracks page views
+
   useEffect(() => {
     setShowSidebar(false);
   }, [location]);
@@ -49,6 +51,7 @@ const AppContent = () => {
     </div>
   );
 };
+
 
 const App = () => (
   <Router>
