@@ -49,7 +49,6 @@ const Projects = () => {
         "/images/Prj/prj38.jpeg",
         "/images/Prj/prj39.jpeg",
         "/images/Prj/prj40.jpeg",
-
     ];
 
     const imagesPerSet = 20;
