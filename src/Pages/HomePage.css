@@ -12,7 +12,7 @@
 /* Header styling to ensure it stays above sidebar */
 .homepage-container header {
   position: relative;
-  z-index: 9998; /* Higher than sidebar z-index */
+  z-index: 100; /* Higher than sidebar z-index */
   width: 100%;
   background-color: #f3c53e; /* Match your header color */
   height: 90px;

@@ -454,3 +454,113 @@ body.popup-open .mobile-toggle {
     min-height: 300px;
   }
 }
+/* Add these media queries to your existing CSS to fix the close button position */
+
+/* For mobile devices - 480px and below */
+@media (max-width: 480px) {
+  .popup-content1 {
+    padding: 25px 20px;
+    margin: 10px;
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+    font-weight: 300;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content1 h3 {
+    font-size: 1.4em;
+    padding-right: 45px;
+    margin-bottom: 20px;
+  }
+  
+  .package-info-banner {
+    padding: 12px 15px;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 0.9em;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+  }
+  
+  .submit-enquiry-btn {
+    padding: 14px 18px;
+    font-size: 0.9em;
+  }
+}
+
+/* For very small mobile devices - 375px and below */
+@media (max-width: 375px) {
+  .popup-content1 {
+    padding: 20px 15px;
+    margin: 5px;
+    max-width: calc(100% - 10px);
+    width: calc(100% - 10px);
+  }
+  
+  .close-btn {
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .popup-content1 h3 {
+    font-size: 1.3em;
+    padding-right: 40px;
+    margin-bottom: 18px;
+  }
+  
+  .package-info-banner {
+    padding: 10px 12px;
+    font-size: 0.8em;
+    margin-bottom: 18px;
+  }
+  
+  .consultation-form {
+    gap: 16px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.85em;
+  }
+  
+  .form-group textarea {
+    min-height: 70px;
+  }
+  
+  .submit-enquiry-btn {
+    padding: 12px 16px;
+    font-size: 0.85em;
+  }
+  
+  .form-group label {
+    font-size: 0.85em;
+  }
+}
